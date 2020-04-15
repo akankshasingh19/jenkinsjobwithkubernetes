@@ -8,7 +8,7 @@
 # nameOverride:
 # fullnameOverride:
 
-Master:
+master.jenkins-master:
   Name: jenkins-master
   Image: "jenkins/jenkins"
   ImageTag: "lts"
@@ -61,7 +61,7 @@ Master:
   NodeSelector: {}
   Tolerations: {}
 
-Agent:
+agent.enabled:
   Enabled: true
   Image: jenkins/jnlp-slave
   ImageTag: 3.10-1
@@ -80,7 +80,7 @@ Agent:
   #    mountPath: /var/run/docker.sock
   NodeSelector: {}
 
-Persistence:
+persistentVolumeClaim:
   Enabled: false
 
   Annotations: {}
@@ -95,7 +95,7 @@ NetworkPolicy:
   ApiVersion: networking.k8s.io/v1
 
 ## Install Default RBAC roles and bindings
-rbac:
+rbac.create:
   install: true
   serviceAccountName: jenkins-master
   # RBAC api version (currently either v1beta1 or v1alpha1)
