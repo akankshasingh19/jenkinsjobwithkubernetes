@@ -15,7 +15,7 @@ Master:
   ImagePullPolicy: "Always"
   Component: "jenkins-master"
   UseSecurity: true
-  AdminUser: admin
+  AdminUser: jenkins
   # AdminPassword: <defaults to random>
   Cpu: "200m"
   Memory: "256Mi"
@@ -35,9 +35,9 @@ Master:
   # Environment Variables
   ContainerEnv:
     - name: CASC_JENKINS_CONFIG
-      value: https://raw.githubusercontent.com/tizianatroukens/jenkins-kubernetes/master/casc/config.yml
+      value: https://github.com/akankshasingh19/jenkinsjobwithkubernetes/blob/master/casc/config.yml
     - name: JENKINS_URL
-      value: http://192.168.99.100:32000
+      value: http://10.0.212.146:32000/
 
   # List of plugins to be install during Jenkins master start
   InstallPlugins:
