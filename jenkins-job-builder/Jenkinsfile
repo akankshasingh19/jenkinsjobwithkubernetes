@@ -8,11 +8,12 @@ pipeline {
   agent {
     kubernetes {
       label 'jenkins-job-builder'
+	  node 'jenkins-job-builder'
       defaultContainer 'jenkins-job-builder'
       yamlFile 'jenkins-job-builder/pod.yml'
     }
   }
-
+  
   stages {
     stage ('Checking out') {
       steps {
