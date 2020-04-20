@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: jenkins-job-builder
-      image: widerplan/jenkins-job-builder:v2.1.0
+      image: timothyvandenbrande/jenkins-job-builder
       command:
         - cat
       tty: true
