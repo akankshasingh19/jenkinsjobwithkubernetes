@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: jenkins-job-builder
-      image: timothyvandenbrande/jenkins-job-builder:latest
+      image: widerplan/jenkins-job-builder:v2.1.0
       command:
         - cat
       tty: true
@@ -21,6 +21,8 @@ spec:
       command:
         - cat
       tty: true
+  nodeSelector:
+    disktype: ssd
   volumes:
     - name: jjb-config
       configMap:
