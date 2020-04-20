@@ -21,8 +21,8 @@ jenkins:
     local:
       allowsSignup: false
       users:
-        - id: "jenkins"
-          password: "jenkins123"
+        - id: "admin"
+          password: "admin123"
 jobs:
   - script: >
       pipelineJob('Jenkins Job Builder') { 
@@ -33,7 +33,7 @@ jobs:
           cpsScm { 
             scm { 
               git { 
-                remote { url('git://github.com/akankshasingh19/jenkinsjobwithkubernetes.git') } 
+                remote { url('https://github.com/akankshasingh19/jenkinsjobwithkubernetes.git') } 
                 branches('master') 
                 scriptPath('jenkins-job-builder/Jenkinsfile')
               }
