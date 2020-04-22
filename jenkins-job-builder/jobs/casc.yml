@@ -12,4 +12,6 @@
           cron: "* * * * *"
           enable-concurrent: false
     builders:
-      - shell: ls -l
+      - shell: |
+           pwd
+           whoami
