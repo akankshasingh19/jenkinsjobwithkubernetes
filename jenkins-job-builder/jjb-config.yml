@@ -17,5 +17,5 @@ data:
     [jenkins]
     user=admin
     password=admin123
-    url=http://10.0.212.146:30502
+    url=http://10.0.212.146:30802
     query_plugins_info=False
