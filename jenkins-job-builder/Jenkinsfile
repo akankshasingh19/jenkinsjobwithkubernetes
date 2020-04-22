@@ -7,11 +7,12 @@ pipeline {
   }
   agent {
     kubernetes {
+      label 'jenkins-job-builder'
       defaultContainer 'jenkins-job-builder'
       yamlFile 'jenkins-job-builder/pod.yml'
     }
   }
-  node {
+
   stages {
     stage ('Checking out') {
       steps {
@@ -43,5 +44,4 @@ pipeline {
       }
     }
   }
-}
 }
