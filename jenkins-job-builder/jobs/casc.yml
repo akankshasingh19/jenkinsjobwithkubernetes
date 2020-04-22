@@ -13,4 +13,5 @@
           enable-concurrent: false
     builders:
       - shell: |
-          pwd
+           pwd
+           ls
