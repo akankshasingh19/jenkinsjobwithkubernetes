@@ -21,8 +21,6 @@ spec:
       command:
         - cat
       tty: true
-  nodeSelector:
-    disktype: ssd
   volumes:
     - name: jjb-config
       configMap:
