@@ -12,4 +12,4 @@
           cron: "* * * * *"
           enable-concurrent: false
     builders:
-      - shell: ls -l
+      - shell: ls
