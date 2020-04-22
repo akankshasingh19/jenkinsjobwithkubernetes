@@ -3,13 +3,13 @@
     name: update-casc-config
     display-name: "Update Configuration-as-Code configuration"
     scm:
-      - git:
-          url: https://github.com/akankshasingh19/jenkinsjobwithkubernetes.git
-          branches:
-            - origin/master
+     - git:
+        url: https://github.com/akankshasingh19/jenkinsjobwithkubernetes.git
+        branches:
+         - origin/master
     triggers:
-      - pollscm:
-          cron: "* * * * *"
-          enable-concurrent: false
+     - pollscm:
+        cron: "* * * * *"
+        enable-concurrent: false
     builders:
-      - shell: ls
+     - shell: ls
