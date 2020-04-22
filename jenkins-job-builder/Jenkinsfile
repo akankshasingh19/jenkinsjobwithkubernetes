@@ -33,7 +33,8 @@ pipeline {
     }
     stage('Test Jenkins Job Builder Files') {
       steps {
-        sh 'jenkins-jobs Test jenkins-job-builder/jobs/'
+	    container('jenkins-job-builder')
+        sh 'jenkins-jobs test jenkins-job-builder/jobs/'
       }
     }
     stage('Apply Jenkins Job Builder Files') {
