@@ -1,5 +1,5 @@
 - project:
-    name: AkankshaSingh/Multiple-JJB-Temp
+    name: Multiple-JJB-Temp
     jobs:
         - 'Multiple-JJB-Temp-{num}':
             num: 1
