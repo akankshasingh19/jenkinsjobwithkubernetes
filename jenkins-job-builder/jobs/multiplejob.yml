@@ -1,0 +1,50 @@
+- project:
+    name: AkankshaSingh/Multiple-JJB-Temp
+    jobs:
+        - 'Multiple-JJB-Temp-{num}':
+            num: 1
+        - 'Multiple-JJB-Temp-{num}':
+            num: 2
+        - 'Multiple-JJB-Temp-{num}':
+            num: 3
+ 
+- job-template:
+    disabled_var:
+    command: 'df'
+    type: freestyle
+    
+    name: 'Multiple-JJB-Temp-{num}'
+    id: 'Multiple-JJB-Temp-{num}'
+    scm:
+      - Multiple-JJB-Temp
+    builders:
+      - maven-target:
+            maven-version: Maven_home
+            pom: MavenHelloWorldProject/pom.xml
+            goals: clean compile package install test
+    publishers:
+      - archive:
+          artifacts: 'MavenHelloWorldProject/target/*.jar'
+          allow-empty: 'true'
+          fingerprint: true
+          default-excludes: false
+    description: 'Do not edit this job through the web!'
+    disabled: false
+    concurrent: true
+    quiet-period: 5
+    block-downstream: false
+    block-upstream: false
+    retry-count: 3
+    logrotate:
+      daysToKeep: 3
+      numToKeep: 20
+      artifactDaysToKeep: -1
+      artifactNumToKeep: -1
+
+- scm:
+    name: Multiple-JJB-Temp
+    scm:
+      - git:
+         url: https://github.com/akankshasingh19/samplecode.git
+         branches:
+          - master
