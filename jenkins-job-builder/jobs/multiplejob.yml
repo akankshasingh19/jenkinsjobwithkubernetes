@@ -1,5 +1,5 @@
 - project:
-    name: Multiple-JJB-Temp
+    name: AkankshaSingh/Multiple-JJB-Temp
     jobs:
         - 'Multiple-JJB-Temp-{num}':
             num: 1
@@ -7,12 +7,10 @@
             num: 2
         - 'Multiple-JJB-Temp-{num}':
             num: 3
- 
 - job-template:
     disabled_var:
     command: 'df'
     type: freestyle
-    
     name: 'Multiple-JJB-Temp-{num}'
     id: 'Multiple-JJB-Temp-{num}'
     scm:
@@ -40,7 +38,6 @@
       numToKeep: 20
       artifactDaysToKeep: -1
       artifactNumToKeep: -1
-
 - scm:
     name: Multiple-JJB-Temp
     scm:
