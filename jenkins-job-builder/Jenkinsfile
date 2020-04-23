@@ -39,7 +39,7 @@ pipeline {
     }
     stage('Apply Jenkins Job Builder Files') {
       steps {
-          sh 'jenkins-jobs update jenkins-job-builder/jobs/'
+          sh 'jenkins-jobs update -r jenkins-job-builder/jobs/'
       }
     }
   }
